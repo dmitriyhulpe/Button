@@ -1,0 +1,67 @@
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*,
+*:before,
+*:after
+{
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+.button
+{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+
+    color: #fff;
+    background-color: #21262b;
+
+    border-radius: 5px;
+    padding: 10px;
+
+    font-weight: 700;
+
+    transition: 0.25s;
+}
+
+.button span
+{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: ripples 1s linear;
+}
+
+@keyframes ripples
+{
+    0%
+    {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%
+    {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
